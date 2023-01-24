@@ -1,12 +1,5 @@
-ORIGIM = imread('cameraman.tif');
-ORIGIM = double(ORIGIM);
-distance_map(n,m) = manhattan(n, m, 9, 9);
+ORIFIM = imread('cameraman.tif');
 
-axis image;
-colormap gray figure;
-imagesec(distance_map);
-
-mask = (distance_map <= k);
 
 SFFTIMAGE = complex(zeros(size(ORIGIM)));
 for k  = 1:16:size(ORIGIM,1)-15
