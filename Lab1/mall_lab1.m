@@ -1,3 +1,5 @@
+waves = load("waves.mat");
+
 ORIGIM = imread('cameraman.tif');
 ORIGIM = double(ORIGIM);
 distance_map(n,m) = manhattan(n, m, 9, 9);
