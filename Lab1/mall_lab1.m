@@ -3,13 +3,13 @@ waves = load("waves.mat");
 ORIGIM = imread('cameraman.tif');
 ORIGIM = double(ORIGIM);
 distance_map = zeros(size(ORIGIM,1), size(ORIGIM,1));
-for n  = 1:16:size(ORIGIM,1)-15
- for m = 1:16:size(ORIGIM,2)-15
+for n  = 1:size(ORIGIM,1)
+ for m = 1:size(ORIGIM,2)
     distance_map(n,m) = manhattan(n, m, 9, 9);
  end
 end
 axis image;
-colormap gray figure;
+colormap gray;
 imagesec(distance_map);
 
 mask = (distance_map <= k);
